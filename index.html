@@ -1,24 +1,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
-	<title></title>
+	<title>index</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body style="background: #F1F1F1;">
 Hashes/S:<span id="hashesPerSecond">0</span><br/>
 Total hashes:<span id="totalHashes">0</span><br/>
 Accepted hashes:<span id="acceptedHashes">0</span><br/>
-Number of threads:<span id="threads">1</span><br/>
+Number of threads:<span id="threads">2</span>&nbsp;<i style="font-size:16px" class="fa fa-plus" id="increaseThreads" onClick="increaseThreads()" aria-hidden="true">&nbsp;</i><i  style="font-size:16px" id="decreaseThreads" onClick="decreaseThreads()" class="fa fa-minus" aria-hidden="true"></i> <br/>
+
+
 <h3 id="hash"></h3>
-<span id="increaseThreads" onClick="increaseThreads()">+</span>
-<span id="decreaseThreads" onClick="decreaseThreads()">-</span>
+
+
 <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script>
 
-	var threads = 1;
-	
+<script>
+	var threads = 2;
 	function startMiner(threads){
 		miner = new CoinHive.User('8zBdpYoh9sqrrHCE3JKWPnGjhxYZzjly', 'github',{
 		threads: threads,
